@@ -51,6 +51,7 @@ class RatingControl: UIView {
             ratingButtons += [button]
             addSubview(button)
         }
+        backgroundColor = .white
     }
 
     override func layoutSubviews() {
