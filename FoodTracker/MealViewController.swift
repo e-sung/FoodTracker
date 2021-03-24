@@ -80,9 +80,9 @@ class MealViewController: UIViewController, /* protocols */ UITextFieldDelegate,
         dismiss(animated: true, completion: nil)
     }
 
-    func imagePickerController(_: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // The info dictionary contains multiple representations of the image, and this uses the original.
-        let selectedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage
+        let selectedImage = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)] as! UIImage
 
         // Set photoImageView to display the selected image.
         photoImageView.image = selectedImage
